@@ -1,0 +1,226 @@
+.mycart{
+  display:flex;
+  flex: 1;
+  max-width: 120px;
+	color: #fff;
+  background-color: #D1203C;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  border-radius: 50px;
+	text-decoration: none;
+  cursor: pointer;
+}
+.shopping-cart-logo{
+  flex:2;
+  background-color: #D1203C;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  height: 35px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.shopping-cart-logo1 {
+
+}
+.shopping-cart-logo a:hover {
+  color: #fff;
+}
+ .mycart .counting-cart-number{
+  flex:1;
+  display: flex;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #D1203C;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+ .mycart{
+  color: #fff;
+}
+ .mycart:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* helper class when showing content */
+.product-img-product-img img{
+  max-height: 200px;
+}
+
+.product-img-product-details h3:hover{
+  text-decoration: none;
+}
+
+/* Main content */
+.main {
+  position: relative;
+  z-index: 50;
+}
+
+/* Grid container */
+.grid {
+  position: relative;
+}
+
+/* Grid item */
+.grid__item {
+  padding: 45px 55px 30px;
+  position: relative;
+  color: inherit;
+  background: #fff;
+  min-height: 300px;
+  cursor: pointer;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.grid__item-view-on-hover{
+  position: absolute;
+  background-color: #6300D6;
+  padding: 20px 20px 40px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.grid__item-view-on-hover:hover{
+  opacity:.96;
+
+}
+.grid__item-view-on-hover-container{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.grid__item-view-on-hover-container-top-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+
+}
+.grid__item-view-on-hover-container-top-line p{
+  margin-bottom: 0;
+}
+.grid__item-view-on-hover-container-middle-line {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.grid__item-view-on-hover-container-middle-line  .btn-white-cart-button{
+  background: #fff;
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: 0;
+}
+.grid__item-view-on-hover-container-middle-line  .btn-white-cart-button .fa-cart-plus{
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.grid__item-view-on-hover-container-bottom-line h3{
+  text-transform:uppercase;
+  color: #fff;
+  margin: 0 auto;
+  font-weight:bolder;
+}
+.grid__item-view-on-hover-container-bottom-line h3:hover{
+  text-decoration: none;
+}
+.grid__item-view-on-hover-container-bottom-line p{
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Grid item "border" */
+.grid__item::before {
+  position: absolute;
+  content: '';
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left:0px;
+  border-bottom: 1px solid rgba(74, 74, 74, 0.075);
+}
+
+.grid__item * {
+  z-index: 10;
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+    height: 100%;
+    /*margin-left: 300px;*/
+  }
+
+  .grid__item {
+    padding: 45px 45px 30px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  /* 2 columns */
+  .grid__item{
+    width: 50%;
+    border: none;
+  }
+  .grid__item::before {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border: 1px solid rgba(74, 74, 74, 0.075);
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* 3 columns */
+  .grid__item {
+    width: 33.333%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  /* 4 columns */
+  .grid__item{
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  /* 5 columns */
+  .grid__item {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 2100px) {
+  /* 6 columns */
+  .grid__item {
+    width: 16.66%;
+  }
+}
